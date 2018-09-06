@@ -1,6 +1,6 @@
 export class Manual {
     constructor(
-        public nombre:string
+        public titulo:string
 
     ){}
 }
