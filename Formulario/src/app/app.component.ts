@@ -10,11 +10,7 @@ export class AppComponent {
   msg: string = '';
   hideUpdate: boolean = true;
 
-  documento = [
-    /*{'name': 'JS', position: 'manager'},
-    {'name': 'FO', position: 'designer'},
-    {'name': 'Nosfer', position: 'Programer'}*/
-  ];
+  documento = [];
 
   model: any = {};
   model2: any = {};
