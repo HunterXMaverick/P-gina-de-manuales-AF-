@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ProyectoAngular": {
+    "Formulario": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ProyectoAngular",
+            "outputPath": "dist/Formulario",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ProyectoAngular:build"
+            "browserTarget": "Formulario:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ProyectoAngular:build:production"
+              "browserTarget": "Formulario:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ProyectoAngular:build"
+            "browserTarget": "Formulario:build"
           }
         },
         "test": {
@@ -72,10 +72,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/nova-light/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [
@@ -98,7 +95,7 @@
         }
       }
     },
-    "ProyectoAngular-e2e": {
+    "Formulario-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -106,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ProyectoAngular:serve"
+            "devServerTarget": "Formulario:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ProyectoAngular:serve:production"
+              "devServerTarget": "Formulario:serve:production"
             }
           }
         },
@@ -126,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "ProyectoAngular"
+  "defaultProject": "Formulario"
 }

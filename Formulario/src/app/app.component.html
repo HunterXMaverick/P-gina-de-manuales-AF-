@@ -1,0 +1,94 @@
+<div class="container">
+  <!-- Titulo -->
+  <div class="row">
+    <div class="col-xs-8">
+      <h1 class="text-center">
+        {{tittle}}
+      </h1>
+    </div>
+    <div class="col-sm-4">
+      <div class="alert alert-success alert-dismissable">
+        <a href="#" class="close">
+          &times;
+        </a>
+        Mensaje
+      </div>
+    </div>
+  </div>
+  <!-- Formulario Para Insetar -->
+  <div class="row">
+    <div class="col-sm-4">
+      <img width="100" src="https://scontent.fuio1-1.fna.fbcdn.net/v/t1.0-1/c48.0.405.405/10982411_1562348120692741_5293541776355491254_n.jpg?_nc_cat=0&oh=beeffe99fc0b8c94db9e3fe2c1402062&oe=5C2993C5">
+    </div>
+    <div class="col-sm-8">
+      <h2>Crear data</h2>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-2">
+            Nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="nombre" [(ngModel)]="model.nombre" placeholder="Ingrese Nombre">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button class="submit" class="btn btn-success" (click)="agregarDocumento()">
+              Guardar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Formulario Para Editar o Borrar-->
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Leer Dato</h2>
+      <table class="table table-bordered">+
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Ubicacion</th>
+            <th>Documento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let documento of documento; let i= index">
+            <td>{{documento.nombre}}</td>
+            <td>{{documento.ubicacion}}</td>
+            <td>
+              <a (click)="editarDocumento(i)" class="btn btn-red">
+                Editar
+              </a>
+              <a (click)=" borrarDocumento(i)" class="btn btn-dark">
+                Borrar
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-4">
+      <h2>Actualizar data</h2>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-2">
+            Nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="nombre" [(ngModel)]="model2.nombre" placeholder="Ingrese Nombre">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button class="submit" class="btn btn-success" (click)="actualizarDocumento()">
+              Actializar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <a href="https://drive.google.com/drive/folders/1t46Gq2LDNmwghwf7Mikil1f5nVs9uj60" target='_blank'>click de enlace</a>
+</div>
